@@ -1,9 +1,13 @@
 ﻿using System;
+using BankingApplicationLibrary;
 
 namespace BankingApplication {
     class Program {
         static void Main(string[] args) {
-            Console.WriteLine("Hello World!");
+
+            var chk = new Account();
+            chk.Deposit(100);
+            chk.Withdraw(75);
         }
     }
 }

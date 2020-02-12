@@ -8,13 +8,14 @@ namespace BankingApplicationLibrary {
         public string Description { get; set; }
         
         public void Deposit(decimal amount) {
-
+            Balance += amount;
         }
         public void Withdraw(decimal amount) {
-
+            Balance -= amount;
         }
         public void Transfer(decimal amount, Account toAccount, Account fromAccount) {
-
+            fromAccount.Withdraw(amount);
+            toAccount.Deposit(amount);
         }
 
         public Account() { }
